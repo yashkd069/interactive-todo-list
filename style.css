@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef4ff, #f8fbff);
+  color: #17233c;
+  padding: 40px 20px;
+}
+.app {
+  width: min(700px, 100%);
+  margin: auto;
+}
+header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.tag {
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+h1 {
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+header > p:last-child {
+  color: #64748b;
+}
+.card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 15px 40px rgba(31, 41, 55, 0.12);
+}
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+#taskInput {
+  flex: 1;
+  padding: 14px 16px;
+  border: 1px solid #dbe3ef;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+#taskInput:focus {
+  border-color: #2563eb;
+}
+#addBtn {
+  border: 0;
+  border-radius: 10px;
+  padding: 0 20px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 22px 0 12px;
+  color: #64748b;
+  font-size: 14px;
+}
+.clear {
+  border: 0;
+  background: transparent;
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 600;
+}
+#taskList {
+  list-style: none;
+}
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 4px;
+  border-bottom: 1px solid #edf1f7;
+}
+.task-text {
+  flex: 1;
+  word-break: break-word;
+}
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+.complete-btn,
+.delete-btn {
+  border: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-weight: 600;
+}
+.complete-btn {
+  background: #e8f7ef;
+  color: #15803d;
+}
+.delete-btn {
+  background: #fff0f0;
+  color: #dc2626;
+}
+.empty {
+  text-align: center;
+  color: #94a3b8;
+  padding: 30px 10px 10px;
+}
+@media (max-width: 560px) {
+  body {
+    padding: 24px 14px;
+  }
+  h1 {
+    font-size: 34px;
+  }
+  .input-row {
+    flex-direction: column;
+  }
+  #addBtn {
+    height: 46px;
+  }
+  .card {
+    padding: 18px;
+  }
+}
